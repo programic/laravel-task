@@ -1,5 +1,5 @@
 {
-    "name": "programic/laravel-tasks",
+    "name": "programic/laravel-task",
     "license": "proprietary",
     "type": "package",
     "description": "Task automation like migrations",
