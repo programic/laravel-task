@@ -1,0 +1,33 @@
+{
+    "name": "programic/laravel-tasks",
+    "license": "proprietary",
+    "type": "package",
+    "description": "Task automation like migrations",
+    "readme": "README.md",
+    "authors": [
+        {
+            "name": "Programic",
+            "email": "development@programic.com",
+            "homepage": "https://programic.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Programic\\Tasks\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Programic\\Tasks\\TaskServiceProvider"
+            ]
+        }
+    }
+}

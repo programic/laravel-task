@@ -1,0 +1,35 @@
+<?php
+
+use Programic\Tasks\Facades\Task;
+use Programic\Tasks\TaskMigration;
+use Symfony\Component\Console\Output\ConsoleOutput;
+
+
+class TASK_NAME extends TaskMigration
+{
+    /**
+     * Run the task.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Task::when(true, function (ConsoleOutput $output) {
+
+        });
+
+        Task::run(function(ConsoleOutput $output) {
+
+        });
+    }
+
+    /**
+     * Reverse the task.
+     *
+     * @return void
+     */
+    public function down()
+    {
+
+    }
+}
