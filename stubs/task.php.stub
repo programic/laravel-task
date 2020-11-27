@@ -15,11 +15,11 @@ class TASK_NAME extends TaskMigration
     public function up()
     {
         Task::when(true, function (ConsoleOutput $output) {
-
+            //
         });
 
         Task::run(function(ConsoleOutput $output) {
-
+            //
         });
     }
 
