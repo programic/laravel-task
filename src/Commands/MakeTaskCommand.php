@@ -38,7 +38,7 @@ class MakeTaskCommand extends Command
         $fileName = Carbon::now()->format('Y_m_d_His') . '_' . $taskName . '.php';
 
         $stub = File::get(__DIR__ . '/../../stubs/task.php.stub');
-        $stub = Str::of($stub)->replace('TASK_NAME', $className);
+        $stub = str_replace($stub, 'TASK_NAME', $className);
 
         File::put(base_path() . '/tasks/' . $fileName, $stub);
 
