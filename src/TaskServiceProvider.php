@@ -35,7 +35,7 @@ class TaskServiceProvider extends ServiceProvider
     {
         // Load migrations from "Task" folder
         $path = 'tasks';
-        if(!File::isDirectory(base_path() . '/' . $path)){
+        if (!File::isDirectory(base_path() . '/' . $path)) {
             File::makeDirectory($path, 0755, true, true);
         }
         $this->loadMigrationsFrom($path);

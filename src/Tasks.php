@@ -3,11 +3,12 @@
 namespace Programic\Tasks;
 
 use Illuminate\Contracts\Foundation\Application;
+use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Console\Output\ConsoleOutput;
 
 class Tasks
 {
-    protected $app;
+    protected Application $app;
 
     public function __construct(Application $app)
     {
@@ -19,7 +20,7 @@ class Tasks
      * @param callable $task
      * @return $this
      */
-    public function when($condition, callable $task)
+    public function when($condition, callable $task) : Tasks
     {
         if (is_callable($condition)) {
             $condition = $condition();
@@ -36,9 +37,35 @@ class Tasks
      * @param callable $task
      * @return $this
      */
-    public function run(callable $task)
+    public function run(callable $task) : Tasks
     {
         $this->process($task);
+
+        return $this;
+    }
+
+    /**
+     * @param callable $task
+     * @return $this
+     */
+    public function fresh(callable $task) : Tasks
+    {
+        $tenant = (string) new ArgvInput();
+
+        $this->when(strpos($tenant, 'migrate:fresh') !== false, $task);
+
+        return $this;
+    }
+
+    /**
+     * @param callable $task
+     * @return $this
+     */
+    public function noFresh(callable $task) : Tasks
+    {
+        $tenant = (string) new ArgvInput();
+
+        $this->when(strpos($tenant, 'migrate:fresh') === false, $task);
 
         return $this;
     }
