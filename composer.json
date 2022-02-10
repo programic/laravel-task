@@ -29,5 +29,10 @@
                 "Programic\\Tasks\\TaskServiceProvider"
             ]
         }
+    },
+    "scripts": {
+        "test": [
+            "vendor/bin/phpunit"
+        ]
     }
 }
