@@ -14,8 +14,7 @@
     ],
     "require-dev": {
         "ext-pdo_sqlite": "*",
-        "orchestra/testbench": "^7.1",
-        "nunomaduro/collision": "^6.1"
+        "orchestra/testbench": "^7.1"
     },
     "autoload": {
         "psr-4": {
