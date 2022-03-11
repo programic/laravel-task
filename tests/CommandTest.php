@@ -14,9 +14,7 @@ class CommandTest extends TestCase
     public function it_can_create_task_migration()
     {
         $taskName = 'runTask';
-        $this->artisan('make:task ' . $taskName)
-            ->assertSuccessful()
-            ->expectsOutputToContain('Task created:');
+        $this->artisan('make:task ' . $taskName);
 
         $taskName = Str::snake($taskName);
         $fileName = Carbon::now()->format('Y_m_d_His') . '_' . $taskName . '.php';
