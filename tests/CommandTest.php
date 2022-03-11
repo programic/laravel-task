@@ -3,6 +3,7 @@
 namespace Programic\Tasks\Tests;
 
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Str;
 use Programic\Tasks\Facades\Task;
 
@@ -14,7 +15,7 @@ class CommandTest extends TestCase
     public function it_can_create_task_migration()
     {
         $taskName = 'runTask';
-        $this->artisan('make:task ' . $taskName);
+        Artisan::call('make:task ' . $taskName);
 
         $taskName = Str::snake($taskName);
         $fileName = Carbon::now()->format('Y_m_d_His') . '_' . $taskName . '.php';
