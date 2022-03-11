@@ -7,8 +7,6 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Str;
 use Programic\Tasks\Facades\Task;
 
-use function PHPUnit\Framework\assertFileExists;
-
 class CommandTest extends TestCase
 {
     /** @test */
