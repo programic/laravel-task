@@ -14,8 +14,7 @@
     ],
     "require-dev": {
         "ext-pdo_sqlite": "*",
-        "orchestra/testbench": "^7.1",
-        "phpunit/phpunit": "^9.4"
+        "orchestra/testbench": "^7.1"
     },
     "autoload": {
         "psr-4": {

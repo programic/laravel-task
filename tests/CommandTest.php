@@ -19,6 +19,10 @@ class CommandTest extends TestCase
         $taskName = Str::snake($taskName);
         $fileName = Carbon::now()->format('Y_m_d_His') . '_' . $taskName . '.php';
 
-        assertFileExists(Task::getDirectory() . $fileName);
+        if (file_exists(Task::getDirectory() . $fileName)) {
+            $this->assertTrue(true);
+        } else {
+            $this->fail('Task migration not exists');
+        }
     }
 }
