@@ -28,8 +28,7 @@ class MakeTaskCommand extends Command
     /**
      * Execute the console command.
      *
-     * @return mixed
-     * @throws Exception
+     * @return void
      */
     public function handle()
     {
@@ -40,7 +39,7 @@ class MakeTaskCommand extends Command
         $stub = File::get(__DIR__ . '/../../stubs/task.php.stub');
         $stub = str_replace('TASK_NAME', $className, $stub);
 
-        File::put(base_path() . '/tasks/' . $fileName, $stub);
+        File::put(Task::getDirectory() . $fileName, $stub);
 
         $this->line('<info>Task created:</info> ' . $fileName);
     }

@@ -3,11 +3,14 @@
 namespace Programic\Tasks;
 
 use Illuminate\Contracts\Foundation\Application;
+use Programic\Tasks\Traits\Helpers;
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Console\Output\ConsoleOutput;
 
 class Tasks
 {
+    use Helpers;
+
     protected Application $app;
 
     public function __construct(Application $app)

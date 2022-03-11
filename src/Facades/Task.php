@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static \Programic\Tasks\Tasks when(bool|\Closure $bool, \Closure $callback)
  * @method static \Programic\Tasks\Tasks fresh(\Closure $callback)
  * @method static \Programic\Tasks\Tasks noFresh(\Closure $callback)
- *
+ * @method static \Programic\Tasks\Tasks getDirectory(): string
  *
  * @see \Illuminate\Database\Schema\Builder
  */

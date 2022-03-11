@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/programic/laravel-task.svg?style=flat-square)](https://packagist.org/packages/programic/laravel-task)
 ![](https://github.com/programic/laravel-task/workflows/Run%20Tests/badge.svg?branch=master)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/programic/laravel-task/run-php-tests?label=Tests)
+[![Tests](https://github.com/programic/laravel-task/actions/workflows/run-tests.yml/badge.svg?branch=master)](https://github.com/programic/laravel-task/actions/workflows/tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/programic/laravel-task.svg?style=flat-square)](https://packagist.org/packages/programic/laravel-task)
 
 This package allows you to automate tasks as in migrations
