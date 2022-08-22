@@ -33,6 +33,8 @@ Task::fresh(fn (ConsoleOutput $output) => '');
 Task::noFresh(fn (ConsoleOutput $output) => '');
 ```
 
+### Custom stub
+Custom stubs are supported. To create your worn "default" task stub copy-paste the stub from our vendor to your project stubs directory.
 
 ### Testing
 ```bash
