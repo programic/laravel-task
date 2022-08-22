@@ -4,7 +4,6 @@ use Programic\Tasks\Facades\Task;
 use Programic\Tasks\TaskMigration;
 use Symfony\Component\Console\Output\ConsoleOutput;
 
-
 class TASK_NAME extends TaskMigration
 {
     /**
