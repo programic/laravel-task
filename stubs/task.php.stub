@@ -4,8 +4,7 @@ use Programic\Tasks\Facades\Task;
 use Programic\Tasks\TaskMigration;
 use Symfony\Component\Console\Output\ConsoleOutput;
 
-class TASK_NAME extends TaskMigration
-{
+return new class() extends TaskMigration {
     /**
      * Run the task.
      *
@@ -13,11 +12,7 @@ class TASK_NAME extends TaskMigration
      */
     public function up()
     {
-        Task::when(true, function (ConsoleOutput $output) {
-            //
-        });
-
-        Task::run(function(ConsoleOutput $output) {
+        Task::noFresh(function (): void {
             //
         });
     }
@@ -31,4 +26,4 @@ class TASK_NAME extends TaskMigration
     {
 
     }
-}
+};
